@@ -51,7 +51,7 @@ pip install -r requirements.txt
     ```bash
     python data/preprocess_iharmony4.py --dir_iharmony4 <DIR_of_iHarmony4> --save_dir <SAVE_DIR> --image_size <IMAGE_SIZE>
     ```
-    This will resize the images to a fixed size, eg, `<image_size, image_size>`. If you want to keep the aspect ratio of the original images, please run:
+    This will help you to resize the images to a fixed size, eg, `<image_size, image_size>`. If you want to keep the aspect ratio of the original images, please run:
     ```bash
     python data/preprocess_iharmony4.py --dir_iharmony4 <DIR_of_iHarmony4> --save_dir <SAVE_DIR> --image_size <IMAGE_SIZE> --keep_aspect_ratio
     ```
@@ -95,7 +95,7 @@ bash scripts/train.sh
 ## Citation
 If you use our code or fine this work useful for your future research, please cite our paper:
 ```bibtex
-@inproceedings{Rainnet,
+@inproceedings{ling2021Rainnet,
     title     = {Region-aware Adaptive Instance Normalization for Image Harmonization}, 
     author    = {Ling, Jun and Xue, Han and Song, Li and Xie, Rong and Gu, Xiao}, 
     booktitle = {IEEE Conference on Computer Vision and Pattern Recognition},
