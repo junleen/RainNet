@@ -95,7 +95,7 @@ bash scripts/train.sh
 ## Citation
 If you use our code or fine this work useful for your future research, please cite our paper:
 ```bibtex
-@inproceedings{DAIN,
+@inproceedings{Rainnet,
     title     = {Region-aware Adaptive Instance Normalization for Image Harmonization}, 
     author    = {Ling, Jun and Xue, Han and Song, Li and Xie, Rong and Gu, Xiao}, 
     booktitle = {IEEE Conference on Computer Vision and Pattern Recognition},
