@@ -1,0 +1,14 @@
+torch>=1.4.0
+torchvision
+tensorboard
+collections
+tqdm
+yacs
+argparse
+numpy>=1.18.5
+scipy>=1.4.1 
+chumpy>=0.69
+scikit-image>=0.15 
+opencv-python>=4.1.1 
+PyYAML>=5.1.1
+pillow
