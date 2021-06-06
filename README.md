@@ -79,7 +79,7 @@ comp_path = 'examples/1.png' or ['examples/1.png', 'examples/2.png']
 mask_path = 'examples/1-mask.png' or ['examples/1-mask.png', 'examples/2-mask.png']
 real_path = 'examples/1-gt.png' or ['examples/1-gt.png', 'examples/2-gt.png']
 ```
-If there is no groundtruth images, you can set `real_path` to `None`
+If there is no groundtruth image, you can set `real_path` to `None`
 
 ### 3. Training your own model
 
