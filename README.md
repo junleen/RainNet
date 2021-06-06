@@ -69,7 +69,7 @@ Run:
 ```bash
 python evaluate.py --dataset_root <DATA_DIR> --save_dir evaluated --batch_size 16 --device cuda 
 ```
-if you want to store the harmonization image, you can add `--store_image`. The evaluating results are stored in `evaluated` directory. 
+if you want to save the harmonization image, you can add `--store_image`. The evaluating results are saved in `evaluated` directory. 
 
 ### 2. Testing with new examples
 
