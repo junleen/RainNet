@@ -5,7 +5,7 @@
 **Region-aware Adaptive Instance Normalization for Image Harmonization**<br>
 Jun Ling, Han Xue, Li Song*, Rong Xie, Xiao Gu
 
-Paper: [link]()<br>
+Paper: [link](https://arxiv.org/abs/2106.02853)<br>
 Video: [link]()
 
 ---
