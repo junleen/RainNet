@@ -34,17 +34,17 @@ cd RainNet
 * Both Linux and Windows are supported, but Linux is recommended for compatibility reasons.
 * We have tested on Python 3.6 with PyTorch 1.4.0 and PyTorch 1.8.1+cu11. 
 
-install the required packages: 
+install the required packages using pip: 
 ```bash
 pip3 install -r requirements.txt
 ```
-or with conda:
+or conda:
 ```bash
 conda create -n rainnet python=3.6
 conda activate rainnet
 pip install -r requirements.txt
 ```
-### 3. Prepare data
+### 3. Prepare the data
 
 * Download [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4) dataset and extract the images. Because the images are too big in the origianl dataset, we suggest you to resize the images (eg, 512x512, or 256x256) and save the resized images in your local device. 
 * We provide the code in `data/preprocess_iharmony4.py`. For example, you can run:
@@ -58,22 +58,22 @@ pip install -r requirements.txt
 
 ### 4. Download our pre-trained model
 
-* Download the pretrained model from [Google Drive](https://drive.google.com/drive/folders/1NMvHbnD1kW-j1KKMxEb9R9IR5drMK3GQ?usp=sharing), and put `net_G.pth` in `checkpoints/experiment_train`. You can save it in other directories and change the `checkpoints_dir` and `name` in `/util/config.py` accordingly. 
+* Download the pretrained model from [Google Drive](https://drive.google.com/drive/folders/1NMvHbnD1kW-j1KKMxEb9R9IR5drMK3GQ?usp=sharing), and put `net_G.pth` in the directory `checkpoints/experiment_train`. You can also save the checkpoint in other directories and change the `checkpoints_dir` and `name` in `/util/config.py` accordingly. 
 
 ## Usage
 ### 1. Evaluation
 
-We provide the code in `evaluate.py`, which support the model evaluation in [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4) dataset.
+We provide the code in `evaluate.py`, which supports the model evaluation in [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4) dataset.
 
 Run: 
 ```bash
 python evaluate.py --dataset_root <DATA_DIR> --save_dir evaluated --batch_size 16 --device cuda 
 ```
-if you want to save the harmonization image, you can add `--store_image`. The evaluating results are saved in `evaluated` directory. 
+If you want to save the harmonized images, you can add `--store_image` at the end of the command. The evaluating results will be saved in the `evaluated` directory. 
 
-### 2. Testing with new examples
+### 2. Testing with your own examples
 
-We also provide the testing code in `test.py` to test other cases. You need to assign image paths in the file
+In this project, we also provide the easy testing code in `test.py` to help you test on other cases. However, you are required to assign image paths in the file for each trial. For example, you can follow:
 ```python
 comp_path = 'examples/1.png' or ['examples/1.png', 'examples/2.png']
 mask_path = 'examples/1-mask.png' or ['examples/1-mask.png', 'examples/2-mask.png']
@@ -83,7 +83,7 @@ If there is no groundtruth image, you can set `real_path` to `None`
 
 ### 3. Training your own model
 
-Run:
+Please update the command arguments in `scripts/train.sh` and run:
 ```bash
 bash scripts/train.sh
 ```
@@ -93,7 +93,7 @@ bash scripts/train.sh
 ![Comparison2](./Doc/Comparison2.png)
 
 ## Citation
-If you use our code or fine this work useful for your future research, please cite our paper:
+If you use our code or find this work useful for your future research, please kindly cite our paper:
 ```bibtex
 @inproceedings{ling2021Rainnet,
     title     = {Region-aware Adaptive Instance Normalization for Image Harmonization}, 
