@@ -6,7 +6,7 @@
 Jun Ling, Han Xue, Li Song*, Rong Xie, Xiao Gu
 
 Paper: [link](https://arxiv.org/abs/2106.02853)<br>
-Video: [link]()
+Video: [link](https://youtu.be/K15NKUpf_1w)
 
 ---
 
