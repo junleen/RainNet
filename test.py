@@ -17,8 +17,7 @@ def load_network(cfg):
                 use_dropout=not cfg.no_dropout)
     
     load_path = os.path.join(cfg.checkpoints_dir, cfg.name, 'net_G.pth')
-    if not os.path.exists(load_path):
-        raise FileExistsError, print('%s not exists. Please check the file'%(load_path))
+    assert os.path.exists(load_path), print('%s not exists. Please check the file'%(load_path))
     print(f'loading the model from {load_path}')
     state_dict = torch.load(load_path)
     util.copy_state_dict(net.state_dict(), state_dict)
