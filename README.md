@@ -8,6 +8,10 @@ Jun Ling, Han Xue, Li Song*, Rong Xie, Xiao Gu
 Paper: [link](https://arxiv.org/abs/2106.02853)<br>
 Video: [link](https://youtu.be/K15NKUpf_1w)
 
+## Update
+- 2021.07. We trained a 512x512 resolution model with several data augmentation methods, including random flip(horizontal, vertical), and random crop. The PSNR score is 38.14 now. [Google Drive](https://drive.google.com/file/d/1nVJFQ1iAGMeZ-ZybJm9vBQfvYs6tkctZ/view?usp=sharing) [Baidu Drive](https://pan.baidu.com/s/1yzCl51OWOssWCT5XpzizYg)(code: n1fl)
+
+
 ---
 
 ### Table of Contents
@@ -58,7 +62,7 @@ pip install -r requirements.txt
 
 ### 4. Download our pre-trained model
 
-* Download the pretrained model from [Google Drive](https://drive.google.com/drive/folders/1NMvHbnD1kW-j1KKMxEb9R9IR5drMK3GQ?usp=sharing), and put `net_G.pth` in the directory `checkpoints/experiment_train`. You can also save the checkpoint in other directories and change the `checkpoints_dir` and `name` in `/util/config.py` accordingly. 
+* Download the pretrained model from [Google Drive](https://drive.google.com/drive/folders/1NMvHbnD1kW-j1KKMxEb9R9IR5drMK3GQ?usp=sharing) or [Baidu Drive](https://pan.baidu.com/s/1YC9CKFrzw_lfegLAgwyHuA)(code: 3qjk), and put `net_G.pth` in the directory `checkpoints/experiment_train`. You can also save the checkpoint in other directories and change the `checkpoints_dir` and `name` in `/util/config.py` accordingly. 
 
 ## Usage
 ### 1. Evaluation
@@ -95,11 +99,12 @@ bash scripts/train.sh
 ## Citation
 If you use our code or find this work useful for your future research, please kindly cite our paper:
 ```bibtex
-@inproceedings{ling2021Rainnet,
-    title     = {Region-aware Adaptive Instance Normalization for Image Harmonization}, 
-    author    = {Ling, Jun and Xue, Han and Song, Li and Xie, Rong and Gu, Xiao}, 
-    booktitle = {IEEE Conference on Computer Vision and Pattern Recognition},
-    year      = {2021}
+@inproceedings{ling2021region,
+  title={Region-aware Adaptive Instance Normalization for Image Harmonization},
+  author={Ling, Jun and Xue, Han and Song, Li and Xie, Rong and Gu, Xiao},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9361--9370},
+  year={2021}
 }
 ```
 
