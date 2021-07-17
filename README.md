@@ -9,7 +9,7 @@ Paper: [link](https://arxiv.org/abs/2106.02853)<br>
 Video: [link](https://youtu.be/K15NKUpf_1w)
 
 ## Update
-- 2021.07. We trained a 512x512 resolution model with several data augmentation methods, including random flip(horizontal, vertical), and random crop. The PSNR score is 38.14 now. [Google Drive](https://drive.google.com/file/d/1nVJFQ1iAGMeZ-ZybJm9vBQfvYs6tkctZ/view?usp=sharing), [Baidu Drive](https://pan.baidu.com/s/1yzCl51OWOssWCT5XpzizYg) (code: n1fl )
+- 2021.07. We trained a 512x512 resolution model with several data augmentation methods, including random flip(horizontal, vertical), and random crop. The PSNR score is 38.14 now. Download the model via [Google Drive](https://drive.google.com/file/d/1nVJFQ1iAGMeZ-ZybJm9vBQfvYs6tkctZ/view?usp=sharing), [Baidu Drive](https://pan.baidu.com/s/1yzCl51OWOssWCT5XpzizYg) (code: n1fl )
 
 
 ---
