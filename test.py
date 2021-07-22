@@ -19,7 +19,7 @@ def load_network(cfg):
     load_path = os.path.join(cfg.checkpoints_dir, cfg.name, 'net_G.pth')
     assert os.path.exists(load_path), print('%s not exists. Please check the file'%(load_path))
     print(f'loading the model from {load_path}')
-    state_dict = torch.load(load_path)
+    state_dict = torch.load(load_path, map_location='cpu')
     util.copy_state_dict(net.state_dict(), state_dict)
     # net.load_state_dict(state_dict)
     return net
@@ -37,6 +37,7 @@ if __name__ == '__main__':
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     testdata = TestDataset(foreground_paths=comp_path, mask_paths=mask_path, background_paths=real_path, load_size=256)
     rainnet = load_network(test_cfg)
+    rainnet = rainnet.to(device)
     
     for i in range(len(testdata)):
         sample = testdata[i]
