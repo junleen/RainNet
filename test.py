@@ -37,7 +37,7 @@ if __name__ == '__main__':
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     testdata = TestDataset(foreground_paths=comp_path, mask_paths=mask_path, background_paths=real_path, load_size=256)
     rainnet = load_network(test_cfg)
-    rainnet = rainnet.to(device)
+    rainnet = rainnet.to(device) # add
     
     for i in range(len(testdata)):
         sample = testdata[i]
