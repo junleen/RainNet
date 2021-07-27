@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 ### 4. Download our pre-trained model
 
-* Download the pretrained model from [Google Drive](https://drive.google.com/drive/folders/1NMvHbnD1kW-j1KKMxEb9R9IR5drMK3GQ?usp=sharing) or [Baidu Drive](https://pan.baidu.com/s/1YC9CKFrzw_lfegLAgwyHuA) (code: 3qjk ), and put `net_G.pth` in the directory `checkpoints/experiment_train`. You can also save the checkpoint in other directories and change the `checkpoints_dir` and `name` in `/util/config.py` accordingly. 
+* Download the pretrained model from [Google Drive](https://drive.google.com/drive/folders/1NMvHbnD1kW-j1KKMxEb9R9IR5drMK3GQ?usp=sharing) or [Baidu Drive](https://pan.baidu.com/s/1YC9CKFrzw_lfegLAgwyHuA) (code: 3qjk ), and put `net_G_last.pth` (not `net_G.pth`) in the directory `checkpoints/experiment_train`. You can also save the checkpoint in other directories and change the `checkpoints_dir` and `name` in `/util/config.py` accordingly. 
 
 ## Usage
 ### 1. Evaluation
