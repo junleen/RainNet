@@ -25,8 +25,8 @@ def load_network(cfg):
                 ngf=cfg.ngf, 
                 norm_layer=RAIN, 
                 use_dropout=not cfg.no_dropout)
-    
-    load_path = os.path.join(cfg.checkpoints_dir, cfg.name, 'net_G.pth')
+    ######################################## net_G_last.pth is better
+    load_path = os.path.join(cfg.checkpoints_dir, cfg.name, 'net_G_last.pth')
     if not os.path.exists(load_path):
         raise FileExistsError, print('%s not exists. Please check the file'%(load_path))
     print(f'loading the model from {load_path}')
@@ -90,7 +90,7 @@ if __name__ == '__main__':
             
         if i+1 % 50 == 0:
             fsave_results.flush()
-    print('MSE: %.4f  PSNR: %.4f' % (calculateMean(all_psnr), calculateMean(all_mse)))
+    print('PSNR: %.4f  MSE: %.4f' % (calculateMean(all_psnr), calculateMean(all_mse)))
     fsave_results.flush()
     fsave_results.close()
     
