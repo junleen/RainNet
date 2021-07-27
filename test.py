@@ -16,7 +16,7 @@ def load_network(cfg):
                 norm_layer=RAIN, 
                 use_dropout=not cfg.no_dropout)
     
-    load_path = os.path.join(cfg.checkpoints_dir, cfg.name, 'net_G.pth')
+    load_path = os.path.join(cfg.checkpoints_dir, cfg.name, 'net_G_last.pth')
     assert os.path.exists(load_path), print('%s not exists. Please check the file'%(load_path))
     print(f'loading the model from {load_path}')
     state_dict = torch.load(load_path, map_location='cpu')
