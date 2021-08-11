@@ -773,7 +773,7 @@ class NLayerDiscriminator(nn.Module):
     def forward(self, input, mask=None, gp=False, feat_loss=False):
 
         x, xf, xb = self.D(input, mask)
-        feat_l, feat_g = torch.cat([xf, xb])
+        feat_l, feat_g = torch.cat([xf, xb]), x
         x = self.convg3(x)
 
         sim = xf * xb
